@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://www.example.org/Crucero" 
+xmlns:tns="http://www.example.org/Crucero" 
+elementFormDefault="qualified">
+
+<element name="RutaRequest">
+    <complexType>
+        <sequence>
+            <element name="nombreRuta" type="string"></element>
+        </sequence>
+    </complexType>
+</element>
+<element name="ReservacionRequest">
+    <complexType>
+        <sequence>
+            <element name="rutaSelect" type="string"></element>
+            <element name="nombreUsuario" type="string"></element>
+            <element name="fechaInicio" type="string"></element>
+            <element name="fechaFin" type="string"></element>
+            <element name="costoTotal" type="string"></element>
+        </sequence>
+    </complexType>
+</element>
+<element name="VerReservacionRequest">
+    <complexType>
+        <sequence>
+            <element name="nombreReservacion" type="string"></element>
+        </sequence>
+    </complexType>
+</element>
+<element name="EditarReservacionRequest">
+    <complexType>
+        <sequence>
+            <element name="rutaEditar" type="string"></element>
+            <element name="fechaInitEditar" type="string"></element>
+            <element name="fechaFinEditar" type="string"></element>
+        </sequence>
+    </complexType>
+</element>
+<element name="EliminarReservacionRequest">
+    <complexType>
+        <sequence>
+            <element name="reservacionEliminar" type="string"></element>
+        </sequence>
+    </complexType>
+</element>
+<!--///////////////////////////////////////////////////////////////-->
+<element name="RutaResponse">
+    <complexType>
+        <sequence>
+            <element name="resultadoRuta" type="string"></element>
+        </sequence>
+    </complexType>
+</element>
+<element name="ReservacionResponde">
+    <complexType>
+        <sequence>
+            <element name="resultadoRutaSelect" type="string"></element>
+            <element name="resultadoNombreUsuario" type="string"></element>
+            <element name="resultadoFechaInicio" type="string"></element>
+            <element name="resultadoFechaFin" type="string"></element>
+            <element name="resultadoCostoTotal" type="string"></element>
+        </sequence>
+    </complexType>
+</element>
+<element name="VerReservacionResponse">
+    <complexType>
+        <sequence>
+            <element name="resultadoNombreReservacion" type="string"></element>
+        </sequence>
+    </complexType>
+</element>
+<element name="EditarReservacionResponse">
+    <complexType>
+        <sequence>
+            <element name="resultadoRutaEditar"></element>
+            <element name="resultadoRechaInitEditar" type="string"></element>
+            <element name="resultadoFechaFinEditar" type="string"></element>
+        </sequence>
+    </complexType>
+</element>
+<element name="EliminarReservacionResponse">
+    <complexType>
+        <sequence>
+            <element name="resultadoReservacionEliminar" type="string"></element>
+        </sequence>
+    </complexType>
+</element>
+</schema>
